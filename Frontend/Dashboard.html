@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study Assistant</title>
+  <link rel="stylesheet" href="Dashboard.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="background-glow"></div>
+
+<div class="container">
+
+   <aside class="sidebar">
+
+    <div class="logo">
+        <span>⚡</span>
+        AI Study
+    </div>
+
+    <button class="new-chat">
+        + New Chat
+    </button>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="chatSearch"
+            placeholder="Search chats..."
+        >
+    </div>
+
+    <div class="chat-list"></div>
+
+</aside>
+ 
+    <main class="chat-area">
+
+        <div class="welcome">
+            <div class="orb"></div>
+
+            <h1>AI Study Assistant</h1>
+
+            <p>
+                Ask anything. Learn faster.
+            </p>
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="input"
+                placeholder="Message AI Study Assistant..."
+            >
+            <button id="exportBtn">
+    📄 Export
+</button>
+
+<button id="notesBtn">
+    📝 Notes
+</button>
+
+<button id="quizBtn">
+    🧠 Quiz
+</button>   
+
+            <button onclick="sendMessage()">
+                ➤
+            </button>
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>
