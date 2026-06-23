@@ -86,18 +86,18 @@ setInterval(() => {
 },500);
 
   try {
-    const res = await fetch(
-      "http://localhost:5000/chat",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          message: message
-        })
-      }
-    );
+    const response = await fetch(
+  "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message: userInput
+    })
+  }
+);
 
     const data = await res.json();
 
