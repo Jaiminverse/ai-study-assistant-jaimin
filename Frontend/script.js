@@ -84,7 +84,7 @@ setInterval(() => {
     "Thinking" + ".".repeat(dots);
 
 },500);
-
+const userInput = input.value.trim();
   try {
     const response = await fetch(
   "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
@@ -99,7 +99,7 @@ setInterval(() => {
   }
 );
 
-    const data = await res.json();
+   const data = await response.json();
 
 clearInterval(thinkingAnimation);
 
