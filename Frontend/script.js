@@ -58,7 +58,9 @@ if(currentTitle === ""){
   userMsg.classList.add("user-msg");
   userMsg.innerText = message;
   messages.appendChild(userMsg);
-
+    
+const userInput = input.value.trim();
+    
   input.value = "";
 
   // Thinking message
@@ -84,7 +86,7 @@ setInterval(() => {
     "Thinking" + ".".repeat(dots);
 
 },500);
-const userInput = input.value.trim();
+
   try {
     const response = await fetch(
   "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
