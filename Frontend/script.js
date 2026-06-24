@@ -449,15 +449,15 @@ async function generateNotes() {
                 .map(msg => msg.text)
                 .join("\n");
 
-       const response = await fetch(
-       "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
-           
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    message: `
+      const response = await fetch(
+    "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: `
 You are an expert study notes generator.
 
 Create professional study notes from the following conversation.
@@ -486,11 +486,11 @@ Conversation:
 
 ${chatText}
 `
-                })
-            }
-        );
+        })
+    }
+);
 
-        const data = await res.json();
+const data = await response.json();
 
         loading.remove();
 
