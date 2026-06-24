@@ -449,9 +449,9 @@ async function generateNotes() {
                 .map(msg => msg.text)
                 .join("\n");
 
-        const res = await fetch(
-            "http://localhost:5000/chat",
-            {
+       const response = await fetch(
+       "https://ai-study-assistant-production-9fc3.up.railway.app/chat",
+           
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
